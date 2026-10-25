@@ -10,7 +10,7 @@ npm run investigations -- close-case --ref="INV-101" --conclusion="Operator supp
 
 The example dates, names and record IDs are placeholders. Replace them with the actual instruction. Do not silently use the example dates or invent findings.
 
-Accepted options: `--ref`, `--conclusion`, `--actor`. Add `--json` for structured output. 
+Accepted options: `--ref`, `--conclusion`, `--actor`. Add `--json` for structured output.
 
 
 

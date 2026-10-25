@@ -10,7 +10,7 @@ npm run investigations -- transfer-evidence --ref="EV-101" --from="Aroha" --to="
 
 The example dates, names and record IDs are placeholders. Replace them with the actual instruction. Do not silently use the example dates or invent findings.
 
-Accepted options: `--ref`, `--from`, `--to`, `--location`, `--reason`, `--actor`. Add `--json` for structured output. 
+Accepted options: `--ref`, `--from`, `--to`, `--location`, `--reason`, `--actor`. Add `--json` for structured output.
 
 
 

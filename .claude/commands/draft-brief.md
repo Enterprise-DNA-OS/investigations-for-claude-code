@@ -10,7 +10,7 @@ npm run investigations -- draft-brief --ref="INV-101"
 
 Report identifiers, owners, dates and the missing records. No rows means no matching records, not a compliance certificate.
 
-Accepted options: `--ref`, `--out`. Add `--json` for structured output. 
+Accepted options: `--ref`, `--out`. Add `--json` for structured output.
 
 
 

@@ -10,7 +10,7 @@ npm run investigations -- add-interview --ref="INV-101" --party="P-101" --name="
 
 The example dates, names and record IDs are placeholders. Replace them with the actual instruction. Do not silently use the example dates or invent findings.
 
-Accepted options: `--ref`, `--party`, `--name`, `--owner`, `--at`, `--actor`. Add `--json` for structured output. 
+Accepted options: `--ref`, `--party`, `--name`, `--owner`, `--at`, `--actor`. Add `--json` for structured output.
 
 
 

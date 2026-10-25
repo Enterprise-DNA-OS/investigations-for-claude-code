@@ -10,7 +10,7 @@ npm run investigations -- list
 
 Report identifiers, owners, dates and the missing records. No rows means no matching records, not a compliance certificate.
 
-Accepted options: `--status`. Add `--json` for structured output. 
+Accepted options: `--status`. Add `--json` for structured output.
 
 
 

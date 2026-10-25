@@ -10,7 +10,7 @@ npm run investigations -- add-action --ref="INV-101" --name="Compare receipts" -
 
 The example dates, names and record IDs are placeholders. Replace them with the actual instruction. Do not silently use the example dates or invent findings.
 
-Accepted options: `--ref`, `--name`, `--owner`, `--due`, `--actor`. Add `--json` for structured output. 
+Accepted options: `--ref`, `--name`, `--owner`, `--due`, `--actor`. Add `--json` for structured output.
 
 
 

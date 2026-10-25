@@ -10,7 +10,7 @@ npm run investigations -- review-case --ref="INV-101" --owner="Operator" --purpo
 
 The example dates, names and record IDs are placeholders. Replace them with the actual instruction. Do not silently use the example dates or invent findings.
 
-Accepted options: `--ref`, `--owner`, `--purpose`, `--due`, `--review`, `--priority`, `--hold`, `--reason`, `--actor`. Add `--json` for structured output. 
+Accepted options: `--ref`, `--owner`, `--purpose`, `--due`, `--review`, `--priority`, `--hold`, `--reason`, `--actor`. Add `--json` for structured output.
 
 
 

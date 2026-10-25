@@ -10,7 +10,7 @@ npm run investigations -- party-links
 
 Report identifiers, owners, dates and the missing records. No rows means no matching records, not a compliance certificate.
 
-Accepted options: none. Add `--json` for structured output. 
+Accepted options: none. Add `--json` for structured output.
 
 
 

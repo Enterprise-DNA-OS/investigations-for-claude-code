@@ -10,7 +10,7 @@ npm run investigations -- add-evidence --ref="INV-101" --code="EV-103" --name="R
 
 The example dates, names and record IDs are placeholders. Replace them with the actual instruction. Do not silently use the example dates or invent findings.
 
-Accepted options: `--ref`, `--code`, `--name`, `--holder`, `--location`, `--file`, `--basis`, `--review`, `--actor`. Add `--json` for structured output. 
+Accepted options: `--ref`, `--code`, `--name`, `--holder`, `--location`, `--file`, `--basis`, `--review`, `--actor`. Add `--json` for structured output.
 
 
 

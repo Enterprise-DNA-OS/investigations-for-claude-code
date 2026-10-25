@@ -10,7 +10,7 @@ npm run investigations -- add-case --code="INV-104" --name="Receipt review" --ow
 
 The example dates, names and record IDs are placeholders. Replace them with the actual instruction. Do not silently use the example dates or invent findings.
 
-Accepted options: `--code`, `--name`, `--owner`, `--purpose`, `--due`, `--review`, `--priority`, `--actor`. Add `--json` for structured output. 
+Accepted options: `--code`, `--name`, `--owner`, `--purpose`, `--due`, `--review`, `--priority`, `--actor`. Add `--json` for structured output.
 
 
 

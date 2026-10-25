@@ -10,7 +10,7 @@ npm run investigations -- log --ref="INV-101" --name="Review note" --note="Opera
 
 The example dates, names and record IDs are placeholders. Replace them with the actual instruction. Do not silently use the example dates or invent findings.
 
-Accepted options: `--ref`, `--name`, `--note`, `--actor`. Add `--json` for structured output. 
+Accepted options: `--ref`, `--name`, `--note`, `--actor`. Add `--json` for structured output.
 
 
 

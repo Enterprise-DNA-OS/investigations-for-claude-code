@@ -10,7 +10,7 @@ npm run investigations -- review-evidence --ref="EV-101" --disposition="retained
 
 The example dates, names and record IDs are placeholders. Replace them with the actual instruction. Do not silently use the example dates or invent findings.
 
-Accepted options: `--ref`, `--disposition`, `--reason`, `--review`, `--actor`. Add `--json` for structured output. 
+Accepted options: `--ref`, `--disposition`, `--reason`, `--review`, `--actor`. Add `--json` for structured output.
 
 
 

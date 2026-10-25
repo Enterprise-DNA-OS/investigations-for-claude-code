@@ -10,7 +10,7 @@ npm run investigations -- export
 
 Report identifiers, owners, dates and the missing records. No rows means no matching records, not a compliance certificate.
 
-Accepted options: `--out`. Add `--json` for structured output. 
+Accepted options: `--out`. Add `--json` for structured output.
 
 
 

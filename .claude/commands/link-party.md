@@ -10,7 +10,7 @@ npm run investigations -- link-party --ref="INV-101" --party="P-103" --role="wit
 
 The example dates, names and record IDs are placeholders. Replace them with the actual instruction. Do not silently use the example dates or invent findings.
 
-Accepted options: `--ref`, `--party`, `--role`, `--basis`, `--actor`. Add `--json` for structured output. 
+Accepted options: `--ref`, `--party`, `--role`, `--basis`, `--actor`. Add `--json` for structured output.
 
 
 

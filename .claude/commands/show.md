@@ -10,7 +10,7 @@ npm run investigations -- show --ref="INV-101"
 
 Report identifiers, owners, dates and the missing records. No rows means no matching records, not a compliance certificate.
 
-Accepted options: `--kind`, `--ref`. Add `--json` for structured output. 
+Accepted options: `--kind`, `--ref`. Add `--json` for structured output.
 
 
 
