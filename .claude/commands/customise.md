@@ -1,3 +1,7 @@
+---
+description: "Investigation casework: customise"
+---
+
 # customise
 
 Read CLAUDE.md and the current schema. Ask which field, stage or review rule the operator wants changed if it is unclear. Propose the precise change and its effect on existing records.

@@ -1,3 +1,7 @@
+---
+description: "Investigation casework: show"
+---
+
 # show
 
 Use the investigation records to show.

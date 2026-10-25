@@ -1,3 +1,7 @@
+---
+description: "Investigation casework: weekly review"
+---
+
 # weekly-review
 
 Run the weekly case conference. The CLI combines attention, actions due, interviews due, custody review and retention review.

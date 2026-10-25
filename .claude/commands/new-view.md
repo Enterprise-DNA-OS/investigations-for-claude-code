@@ -1,3 +1,7 @@
+---
+description: "Investigation casework: new view"
+---
+
 # new-view
 
 Read CLAUDE.md and views.json. Translate the requested question into a read-only query over the existing records. Add the report to views.json and run npm run view. Inspect its generated HTML and compare its numbers with the CLI.

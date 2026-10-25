@@ -1,3 +1,7 @@
+---
+description: "Investigation casework: compliance"
+---
+
 # compliance
 
 Review privacy-purpose, ownership, retention and custody checks. Read docs/compliance.md for sources and limits.

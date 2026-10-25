@@ -1,3 +1,7 @@
+---
+description: "Investigation casework: complete action"
+---
+
 # complete-action
 
 Use the investigation records to complete action.

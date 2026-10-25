@@ -1,3 +1,7 @@
+---
+description: "Investigation casework: close case"
+---
+
 # close-case
 
 Record a human closure decision after all actions, interviews and evidence dispositions are reviewed.

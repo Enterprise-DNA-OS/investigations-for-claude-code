@@ -1,3 +1,7 @@
+---
+description: "Investigation casework: case load"
+---
+
 # case-load
 
 Review the open caseload, assigned people, deadlines and held evidence.

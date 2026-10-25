@@ -1,3 +1,7 @@
+---
+description: "Investigation casework: log"
+---
+
 # log
 
 Use the investigation records to log.

@@ -1,3 +1,7 @@
+---
+description: "Investigation casework: draft brief"
+---
+
 # draft-brief
 
 Use the investigation records to draft brief.

@@ -1,3 +1,7 @@
+---
+description: "Investigation casework: add party"
+---
+
 # add-party
 
 Use the investigation records to add party.

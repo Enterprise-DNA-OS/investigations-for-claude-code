@@ -1,3 +1,7 @@
+---
+description: "Investigation casework: reopen case"
+---
+
 # reopen-case
 
 Use the investigation records to reopen case.

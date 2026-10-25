@@ -1,3 +1,7 @@
+---
+description: "Investigation casework: link party"
+---
+
 # link-party
 
 Use the investigation records to link party.

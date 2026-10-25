@@ -1,3 +1,7 @@
+---
+description: "Investigation casework: list"
+---
+
 # list
 
 Use the investigation records to list.

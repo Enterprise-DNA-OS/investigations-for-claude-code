@@ -1,3 +1,7 @@
+---
+description: "Investigation casework: add case"
+---
+
 # add-case
 
 Use the investigation records to add case.

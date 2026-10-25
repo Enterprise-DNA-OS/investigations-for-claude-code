@@ -1,3 +1,7 @@
+---
+description: "Investigation casework: party links"
+---
+
 # party-links
 
 Show parties recorded in more than one case. A shared party is a lead to review, not proof of wrongdoing.
