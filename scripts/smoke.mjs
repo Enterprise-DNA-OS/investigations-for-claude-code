@@ -85,6 +85,7 @@ try{
   const child=spawnSync(process.execPath,[`scripts/${script}.mjs`],{cwd:REPO_ROOT,env:process.env,encoding:'utf8'});eq(child.status,0);
  }
  const rendered=fs.readdirSync(path.join(tmp,'docs-out','case-brief')).map(n=>fs.readFileSync(path.join(tmp,'docs-out','case-brief',n),'utf8')).join('');ok(rendered.includes('&lt;script&gt;'));ok(!rendered.includes('<script>'));
+ for(const script of ['seed','demo']){const denied=spawnSync(process.execPath,[`scripts/${script}.mjs`],{cwd:REPO_ROOT,env:{...process.env,DATABASE_URL:'postgres://example:example@127.0.0.1:9/never-connect'},encoding:'utf8'});eq(denied.status,1);ok(/local (demo )?database/.test(denied.stderr));}
  const cli=spawnSync(process.execPath,['scripts/investigations.mjs','show','--ref=INV','--json'],{cwd:REPO_ROOT,env:process.env,encoding:'utf8'});eq(cli.status,1);ok(cli.stderr.includes('Ambiguous'));
  const read=spawnSync(process.execPath,['scripts/investigations.mjs','list','--json'],{cwd:REPO_ROOT,env:process.env,encoding:'utf8'});eq(read.status,0);eq(JSON.parse(read.stdout).length,6);
  console.log(`PASS: ${checks} checks; ${exercised.size}/${commands.length} CLI commands; isolated ${process.env.TEST_DATABASE_URL?'PostgreSQL':'PGlite'} database; rendered documents and views.`);
