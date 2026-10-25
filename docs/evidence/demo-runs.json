@@ -1,0 +1,24 @@
+{
+  "captured": "2026-10-25T22:19:15.706Z",
+  "data": "Fictional demo seed",
+  "screens": [
+    {
+      "title": "Cases that need review",
+      "ask": "Which cases need attention before our case conference?",
+      "command": "npm run investigations -- attention",
+      "output": "  code     name                           owner  priority  due_on      needs                      \n  -------  -----------------------------  -----  --------  ----------  ---------------------------\n  INV-101  Missing delivery records       Aroha  high      2026-10-23  Case overdue; Review intake\n  INV-102  Supplier document discrepancy         normal    2026-10-30  Assign owner; Review intake\n  INV-103  Stock access review            Tui    normal    2026-11-06  Review intake"
+    },
+    {
+      "title": "Cross-case connections",
+      "ask": "Which recorded parties appear in more than one case?",
+      "command": "npm run investigations -- party-links",
+      "output": "  code   name                     cases  case_codes      \n  -----  -----------------------  -----  ----------------\n  P-101  Kauri Logistics contact  2      INV-101, INV-102"
+    },
+    {
+      "title": "Evidence review",
+      "ask": "Which evidence items are due for a custody check?",
+      "command": "npm run investigations -- custody-review",
+      "output": "  id                                    case_code  code    name                    holder  location             review_on   disposition  custody_events\n  ------------------------------------  ---------  ------  ----------------------  ------  -------------------  ----------  -----------  --------------\n  50000000-0000-4000-8000-000000000001  INV-101    EV-101  Delivery manifest copy  Aroha   Fictional cabinet A  2026-10-24  held         1"
+    }
+  ]
+}

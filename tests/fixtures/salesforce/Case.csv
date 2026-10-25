@@ -1,0 +1,3 @@
+Id,CaseNumber,Subject,Status,Priority,OwnerId,Description
+500EXAMPLE000001,001001,Warehouse receipt discrepancy,Working,High,005EXAMPLE000001,"Fictional export, inspect retained source fields"
+500EXAMPLE000002,001002,Supplier record clarification,Closed,Medium,005EXAMPLE000002,Fictional historical closed case for review

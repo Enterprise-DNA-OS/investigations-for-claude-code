@@ -1,11 +1,43 @@
 [
   {
-    "name": "example",
-    "title": "TODO(author): the first document this industry must produce",
-    "for_each": "select gen_random_uuid() as id, 'Example' as name",
-    "file": "name",
+    "name": "case-brief",
+    "title": "Investigation case brief",
+    "for_each": "select id,code from cases order by code",
+    "file": "code",
     "sections": [
-      { "title": "Details", "sql": "select 'replace me' as item, $1::text as record_id" }
+      {
+        "title": "Case review",
+        "sql": "select code,name,owner,status,purpose,due_on,review_on,legal_hold,hold_reason,conclusion from cases where id=$1"
+      },
+      {
+        "title": "Actions",
+        "sql": "select name,owner,due_on,status,result from actions where case_id=$1 order by due_on"
+      },
+      {
+        "title": "Interviews",
+        "sql": "select i.name,p.name as party,i.owner,i.scheduled_at,i.status,i.notes from interviews i join parties p on p.id=i.party_id where i.case_id=$1 order by i.scheduled_at"
+      },
+      {
+        "title": "Recorded notes",
+        "sql": "select created_at,name,body,actor from notes where case_id=$1 order by created_at"
+      }
+    ]
+  },
+  {
+    "name": "custody-register",
+    "title": "Evidence custody register",
+    "for_each": "select id,code from evidence order by code",
+    "file": "code",
+    "sections": [
+      {
+        "title": "Evidence identification",
+        "sql": "select code,name,sha256,basis,holder,location,disposition,disposition_reason,review_on from evidence where id=$1"
+      },
+      {
+        "title": "Recorded transfers",
+        "sql": "select sequence,created_at,from_holder,to_holder,location,reason,actor from custody where evidence_id=$1 order by sequence",
+        "note": "Recorded events and a file hash support review. They do not establish admissibility or prove an unbroken physical chain."
+      }
     ]
   }
 ]

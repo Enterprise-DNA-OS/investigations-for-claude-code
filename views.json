@@ -1,13 +1,46 @@
 [
   {
     "name": "week",
-    "title": "This week",
-    "subtitle": "Investigations for Claude Code: what needs attention, rendered by npm run view",
+    "title": "Investigation review",
+    "subtitle": "Private working records. A link is not a finding.",
     "sections": [
       {
-        "title": "Needs attention",
-        "note": "TODO(author): point this at the industry's attention view (overdue, stuck, quiet).",
-        "sql": "select 'replace me' as item, 'TODO(author)' as why"
+        "title": "Case load",
+        "sql": "select * from v_case_load order by due_on"
+      },
+      {
+        "title": "Actions due",
+        "sql": "select * from v_actions_due order by due_on"
+      },
+      {
+        "title": "Interviews due",
+        "sql": "select * from v_interviews_due order by scheduled_at"
+      }
+    ]
+  },
+  {
+    "name": "custody",
+    "title": "Evidence custody review",
+    "subtitle": "Private working records. A link is not a finding.",
+    "sections": [
+      {
+        "title": "Evidence due for review",
+        "sql": "select * from v_custody_review order by review_on"
+      },
+      {
+        "title": "Retention review",
+        "sql": "select * from v_retention_review order by review_on"
+      }
+    ]
+  },
+  {
+    "name": "relationships",
+    "title": "Recorded case links",
+    "subtitle": "Private working records. A link is not a finding.",
+    "sections": [
+      {
+        "title": "Parties appearing across cases",
+        "sql": "select * from v_party_links where cases>1 order by code"
       }
     ]
   }

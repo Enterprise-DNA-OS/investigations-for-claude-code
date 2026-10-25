@@ -1,24 +1,9 @@
-# Why there is no front end
+# Views without a front end
 
-Salesforce Investigative Case Management is a database with a subscription. The tables underneath it are ordinary: a few entities, a few relationships, a handful of workflows you repeat every week. What you pay for is the layer on top that lets people who do not write SQL get at those tables. Screens, filters, dashboards, forms.
+The working base supports an authorised operator who records case facts, asks questions, prepares briefs and reviews the week's work. The CLI writes the records. Read-only HTML shows them and prints them.
 
-That layer used to be the whole product, because talking to a database was hard. It is not hard any more. Open this folder in Claude Code, describe what you want, and it writes the query, runs it, and explains the answer. Ask a question the dashboard never had a chart for and you still get an answer.
+A screen adds browser access for a wider team, a visual relationship graph, mobile capture, inline annotation, drag-and-drop evidence intake and guided forms. Offline field capture requires its own synchronisation design. The free base has no mobile application, public intake form, investigator login or shared evidence vault.
 
-## What you gain
+Enterprise DNA builds the agreed screens, access controls and connections around the same records when the business needs them. Those are separate implementation work. The local casework and review routines work without them.
 
-- **Better answers.** A dashboard shows what the vendor decided to chart. Here you ask your own question, in your own words, and get it answered against your own data.
-- **No seats.** Everyone who needs to look can look. The bill does not grow with headcount.
-- **Your data in your Postgres.** Plain tables. Back them up, query them from anything, leave any time. There is no export step because there is nothing to leave.
-- **A process that matches you.** When your way of working changes, you add a command. You do not wait for a feature request to clear.
-
-## What you give up
-
-- **A visual board.** Stages are a table you ask about, not cards you drag.
-- **A phone app.** It runs where Claude Code runs.
-- **A vendor help desk.** This is open source. Enterprise DNA supports the installed version for businesses that want someone to call.
-
-## Who this fits
-
-Small teams who already use Claude Code, or who would rather learn to ask than learn another interface. If your team needs a screen to look at all day, keep Salesforce Investigative Case Management. If you need the answers more than the screens, this is cheaper, faster and yours.
-
-Installed and run for you: https://enterprisedna.co/omni/instead-of/salesforce-investigative-case-management
+Generated HTML is private output. It does not send, publish, file with a court or notify a case party.

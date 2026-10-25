@@ -1,0 +1,3 @@
+Id,WhatId,Subject,Status,ActivityDate,OwnerId,Description
+00TEXAMPLE000001,500EXAMPLE000001,Check signed receipt,Not Started,2026-10-20,005EXAMPLE000001,Fictional task
+00TEXAMPLE000002,500EXAMPLE000002,Review closure record,Completed,2026-10-21,005EXAMPLE000002,Preserve original status but review locally

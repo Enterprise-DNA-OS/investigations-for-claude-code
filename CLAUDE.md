@@ -1,43 +1,61 @@
-# Investigations for Claude Code: operating instructions
+# Investigations for Claude Code
 
-This file is the brain. Claude Code reads it at the start of every session. It says who this is for, how work gets done, and the one right way to do each recurring job.
+A single-business investigation desk for an authorised caseworker. Fictional data is supplied for practice. The database records facts the operator provides, relationships, actions, custody and reviews. It does not establish guilt, liability, legal admissibility or investigation powers.
 
-## Who this is for
+## Start here
 
-- **Business:** [YOUR BUSINESS]
-- **Operator:** [YOUR NAME], [your role]
-- **What matters most:** [the one or two outcomes you care about]
+Read README.md and docs/compliance.md. Every answer starts with the CLI. Read the case and chronology before writing. Use the operator's own name for --actor; never impersonate an approver. No external sends, publication, automatic deletion or live customer connections.
 
-Fill this in once. A worker with context knows. A worker without it guesses.
+## Routing
 
-## How to work
-
-1. **Take a brief, not a script.** The operator describes the outcome. You run the right command and present the answer.
-2. **Read before you write.** Before drafting anything about a record, read its full history first.
-3. **Plain language.** Short sentences. No filler. Numbers in tables.
-4. **Silent success, loud problems.** No play-by-play. Say what broke and what you did about it.
-5. **Stop at the line.** Anything that sends, deletes, or faces a customer waits for a yes in this session.
-
-## Routing table: one right way for each recurring job
-
-| When the operator asks for... | Use this |
+| Job | Recipe |
 |---|---|
-| <!-- TODO(author): one row per slash command --> | `/...` |
+| help | /help |
+| list | /list |
+| show | /show |
+| Review the open caseload, assigned people, deadlines and held evidence. | /case-load |
+| Review overdue actions, undated actions and actions due within seven days. | /actions-due |
+| Review scheduled interviews through the coming seven days, including missed interviews. | /interviews-due |
+| Review overdue evidence checks and missing custody receipts. | /custody-review |
+| Review case retention dates and preservation holds. Never delete on the strength of a date alone. | /retention-review |
+| Show parties recorded in more than one case. A shared party is a lead to review, not proof of wrongdoing. | /party-links |
+| Review unassigned, overdue and unreviewed cases. The fourteen-day quiet-case check is an internal working rule. | /attention |
+| chronology | /chronology |
+| Review privacy-purpose, ownership, retention and custody checks. Read docs/compliance.md for sources and limits. | /compliance |
+| Run the weekly case conference. The CLI combines attention, actions due, interviews due, custody review and retention review. | /weekly-review |
+| add case | /add-case |
+| review case | /review-case |
+| add action | /add-action |
+| complete action | /complete-action |
+| add party | /add-party |
+| link party | /link-party |
+| add interview | /add-interview |
+| record interview | /record-interview |
+| add evidence | /add-evidence |
+| transfer evidence | /transfer-evidence |
+| Record a real physical return with recipient, destination and receipt. Legal holds block this command. | /return-evidence |
+| review evidence | /review-evidence |
+| log | /log |
+| Record a human closure decision after all actions, interviews and evidence dispositions are reviewed. | /close-case |
+| reopen case | /reopen-case |
+| Bring Case.csv and optional Task.csv from a scoped Salesforce export into a review queue. Read the replace guide first. | /import |
+| export | /export |
+| draft brief | /draft-brief |
+| Change a field or rule | /customise |
+| Add a read-only report | /new-view |
 
-If an ask fits nothing here, run the CLI directly (`npm run <cli> -- --help`) and then propose a new command for it.
+## Working rules
 
-## Hard rules
+Use npm run investigations -- help for arguments. Every command accepts --json. Use exact codes, case-insensitive names or partial UUIDs. An ambiguous reference lists candidates and exits 1. Never guess. Mutations require --actor and run in one transaction.
 
-- Never send email or messages from here. Draft to `drafts/`, a person sends.
-- Never delete records without an explicit yes in this session. Prefer marking closed or archived.
-- Never invent a record. If a name is ambiguous, list the candidates and ask.
-- The database is the source of truth. If the answer is not in it, say so.
+Imported cases and actions stay open for review, including source records marked closed. Original fields remain in source_data. Configure ownership, purpose and review dates before closing a case. A missing record is unknown, not a pass. Never invent testimony, receipt times, reasons for a hold or conclusions. Record interviews only after they occurred.
 
-## Where things live
+Preservation holds block evidence returns. Closing a case does not delete or release evidence and does not lift a hold. Closed cases must be reopened with a reason before more casework. No deletion command exists. Return records require the actual recipient, destination and a receipt reference in the reason.
 
-- `scripts/` the CLI. `scripts/lib/db.mjs` picks `DATABASE_URL` (Postgres, Supabase) or the embedded database in `.data/`.
-- `supabase/migrations/` the schema, plain SQL. `npm run migrate` applies it.
-- `.claude/commands/` the slash commands. Add one every time the same ask comes twice.
-- `docs/` the thesis and the guide for moving off Salesforce Investigative Case Management.
+## Files and access
 
-Built by Enterprise DNA. Installed and run for you as part of Omni: https://enterprisedna.co/omni/instead-of/salesforce-investigative-case-management
+One CLI: scripts/investigations.mjs. Migrations: supabase/migrations. Recurring recipes: .claude/commands. All coding agents use these same files. Read-only reports come from views.json and documents.json, branded by brand.json. Drafts, reports, exports, imports and the local database are excluded from git.
+
+The local filesystem and a trusted database operator are the access boundary. Database tables use row-level security with no public policies. This is not per-user authentication. The deployment operator must configure accounts, backups, encrypted storage, access review and recovery before team use. Never seed a shared database.
+
+Omni by Enterprise DNA installs, customises and runs the agreed system: https://enterprisedna.co/omni/book/?offer=replace-software&utm_medium=repo

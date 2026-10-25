@@ -1,0 +1,17 @@
+# chronology
+
+Use the investigation records to chronology.
+
+Read CLAUDE.md. Start from the live local records, never memory.
+
+```bash
+npm run investigations -- chronology --ref="INV-101"
+```
+
+Report identifiers, owners, dates and the missing records. No rows means no matching records, not a compliance certificate.
+
+Accepted options: `--ref`. Add `--json` for structured output. 
+
+
+
+ Never send, publish, decide liability or delete evidence.
