@@ -6,7 +6,7 @@ Own your casework records: evidence receipts, interviews, next actions, custody 
 |---|---|---|
 | Free, MIT. Install the working base. | Your case types, review rules, documents and Salesforce records. | Installed and operated through Omni by Enterprise DNA. One setup fee, then a retainer. |
 
-[Get your version built](https://enterprisedna.co/omni/book/?offer=replace-software&utm_source=github&utm_medium=readme&utm_campaign=salesforce-investigative-case-management) · [Instead of Salesforce Investigative Case Management](https://enterprisedna.co/omni/instead-of/salesforce-investigative-case-management)
+[Get your version built](https://enterprisedna.co/omni/book/?offer=replace-software&utm_source=github&utm_medium=readme&utm_campaign=salesforce-investigative-case-management) · [Instead of Salesforce Investigative Case Management](https://enterprisedna.co/omni/instead-of/salesforce-investigative-case-management?utm_source=github&utm_medium=readme&utm_campaign=salesforce-investigative-case-management)
 
 ## Start with a working case desk
 
